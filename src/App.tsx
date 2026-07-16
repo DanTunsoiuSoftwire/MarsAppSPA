@@ -1,9 +1,10 @@
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import './App.css'
-import Task1Component from "./Components/Task1Component.tsx";
-import Task1ButtonCounterWithLocalStorage from "./Components/Task1ButtonCounterWithLocalStorage.tsx";
-import Task1ButtonCounter from "./Components/Task1ButtonCounter.tsx";
+import Task1Component from "./Components/Part2/Task1Component.tsx";
+import Task1ButtonCounterWithLocalStorage from "./Components/Part2/Task1ButtonCounterWithLocalStorage.tsx";
+import Task1ButtonCounter from "./Components/Part2/Task1ButtonCounter.tsx";
+import Component1 from "./Components/Part3/Component1.tsx";
 
 function App() {
   return (
@@ -12,6 +13,10 @@ function App() {
         <Task1Component></Task1Component>
         <Task1ButtonCounter></Task1ButtonCounter>
         <Task1ButtonCounterWithLocalStorage></Task1ButtonCounterWithLocalStorage>
+      </section>
+
+      <section>
+        <Component1></Component1>
       </section>
 
       <div className="ticks"></div>

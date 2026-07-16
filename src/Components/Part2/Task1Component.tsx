@@ -1,4 +1,4 @@
-﻿import nasaLogo from "../assets/NasaLogo.png";
+﻿import nasaLogo from "../../assets/NasaLogo.png";
 import GenericTask1Component from "./GenericTask1Component.tsx";
 
 export default function Task1Component() {
