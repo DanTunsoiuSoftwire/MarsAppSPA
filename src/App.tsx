@@ -1,15 +1,17 @@
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import './App.css'
-import TPPIComponent from "./Components/TPPIComponent.tsx";
 import Task1ButtonCounterWithLocalStorage from "./Components/Task1ButtonCounterWithLocalStorage.tsx";
 import Task1ButtonCounter from "./Components/Task1ButtonCounter.tsx";
+import GenericTPPIComponent from "./Components/GenericTPPIComponent.tsx";
+import nasaLogo from "./assets/NasaLogo.png";
 
 function App() {
   return (
     <>
       <section id="center">
-        <TPPIComponent></TPPIComponent>
+        <GenericTPPIComponent title="Nasa Information" firstParag="This is the first paragraph!"
+                              secondParag="This is the second paragraph!" image={nasaLogo} />
         <Task1ButtonCounter></Task1ButtonCounter>
         <Task1ButtonCounterWithLocalStorage></Task1ButtonCounterWithLocalStorage>
       </section>
