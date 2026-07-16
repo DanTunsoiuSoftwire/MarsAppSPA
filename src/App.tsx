@@ -1,7 +1,7 @@
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import './App.css'
-import Task1Component from "./Components/Task1Component.tsx";
+import TPPIComponent from "./Components/TPPIComponent.tsx";
 import Task1ButtonCounterWithLocalStorage from "./Components/Task1ButtonCounterWithLocalStorage.tsx";
 import Task1ButtonCounter from "./Components/Task1ButtonCounter.tsx";
 
@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <section id="center">
-        <Task1Component></Task1Component>
+        <TPPIComponent></TPPIComponent>
         <Task1ButtonCounter></Task1ButtonCounter>
         <Task1ButtonCounterWithLocalStorage></Task1ButtonCounterWithLocalStorage>
       </section>

@@ -1,17 +1,22 @@
 ﻿import {useEffect, useState} from "react";
 
 export default function Task1ButtonCounterWithLocalStorage() {
-    const [buttonPresses, setButtonPresses] = useState(0);
+    const [buttonCounter, setButtonCounter] = useState(0);
 
     useEffect(() => {
         if (localStorage.getItem("buttonPresses") != null) {
-            setButtonPresses(parseInt(localStorage.getItem("buttonPresses") as string));
+            setButtonCounter(parseInt(localStorage.getItem("buttonPresses") as string));
         }
     } , []);
 
+    useEffect(() => {
+        if (buttonCounter != 0) {
+            localStorage.setItem("buttonPresses", "" + buttonCounter);
+        }
+    }, [buttonCounter])
+
     function increaseButtonPresses(): void {
-        setButtonPresses(buttonPresses + 1);
-        localStorage.setItem("buttonPresses", "" + (buttonPresses + 1));
+        setButtonCounter(buttonCounter + 1);
     }
 
     return (
@@ -20,7 +25,7 @@ export default function Task1ButtonCounterWithLocalStorage() {
             className="counter"
             onClick={() => increaseButtonPresses()}
         >
-            Count is {buttonPresses}
+            Count is {buttonCounter}
         </button>
     )
 }
