@@ -1,0 +1,21 @@
+.container {
+    display: inline-grid;
+    grid-template-columns: [first-col] 1fr [end-col];
+    grid-template-rows: [first-row] 10% [second-row] 1fr [third-row] 10% [end-row];
+    grid-template-areas:
+        "title"
+        "body";
+        "footer";
+    align-items: stretch;
+    justify-items: center;
+}
+
+.item-title {
+    grid-area: title;
+    border-style: double;
+}
+
+.item-body {
+    grid-area: body;
+    border-style: dashed;
+}

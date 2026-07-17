@@ -1,0 +1,35 @@
+﻿.container {
+    display: inline-grid;
+    grid-template-columns: [first-col] 20% [second-col] 1fr [third-col] 35% [end-col];
+    grid-template-rows: [first-row] 10% [second-row] 1fr [third-row] 15% [end-row];
+    grid-template-areas:
+        ". title ."
+        "search image description"
+        ". footer .";
+    align-items: center;
+    justify-items: center;
+}
+
+.item-image {
+    border-style: dashed;
+    border-color: red;
+    grid-area: image;
+}
+
+.item-title {
+    border-style: dashed;
+    border-color: olivedrab;
+    grid-area: title;
+}
+
+.item-search {
+    border-style: dashed;
+    border-color: blue;
+    grid-area: search;
+}
+
+.item-description {
+    border-style: dashed;
+    border-color: purple;
+    grid-area: description;
+}

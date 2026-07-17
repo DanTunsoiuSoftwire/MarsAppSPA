@@ -1,6 +1,7 @@
 ﻿import * as axios from "axios";
 import {useEffect, useState} from "react";
 import {ImageData} from "./ImageData.ts";
+import './GetImageComponent.css'
 
 export default function GetImageConponent(props: { api : axios.AxiosInstance }) {
     const defaultData: ImageData = new ImageData();
@@ -28,8 +29,8 @@ export default function GetImageConponent(props: { api : axios.AxiosInstance }) 
     }
 
     return (
-        <div>
-            <div className="search">
+        <div className="container">
+            <div className="item-search">
                 <form action={searchPhoto}>
                     <label>
                         Please select a date:
@@ -38,12 +39,17 @@ export default function GetImageConponent(props: { api : axios.AxiosInstance }) 
                     </label>
                 </form>
             </div>
-            <div className="imageDiv">
+            <div className="item-title">
                 <h1> {photoData.title} </h1>
+            </div>
+            <div className="item-image">
                 <img
                     src={photoData.url}
                     alt="Waiting for image."
                 />
+            </div>
+            <div className="item-description">
+                <p> {photoData.description} </p>
             </div>
         </div>
     )

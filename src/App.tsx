@@ -18,34 +18,38 @@ function App() {
   return (
     <>
       <Router>
-        <h1>Welcome to my first ever React SPA!</h1>
-        <Routes>
-          <Route path="/main" element={<MainPage />} />
-          <Route path="/task1" element={<Task1Page />} />
-          <Route path="/task2" element={<Task2Page />} />
-          <Route path="/apod" element={<APODComponent api={api} />} />
-          <Route path="/image" element={<GetImageConponent api={api} />} />
-          <Route path="" element={
-            <div>
-              <div className="sorry">Sorry - that page dose not exist, try there:</div>
+        <div className="item-title">
+          <h1>Welcome to my first ever React SPA!</h1>
+        </div>
+        <div className="item-body">
+          <Routes>
+            <Route path="/main" element={<MainPage />} />
+            <Route path="/task1" element={<Task1Page />} />
+            <Route path="/task2" element={<Task2Page />} />
+            <Route path="/apod" element={<APODComponent api={api} />} />
+            <Route path="/image" element={<GetImageConponent api={api} />} />
+            <Route path="" element={
               <div>
-                <Link to="/main">Go to main page</Link>
-              </div>
-              <div>
-                <Link to="/task1">Go to task 1</Link>
-              </div>
-              <div>
-                <Link to="/task2">Go to task 2</Link>
-              </div>
-              <div>
-                <Link to="/apod">Go to APOD</Link>
-              </div>
-              <div>
-                <Link to="/image">Go to image selector</Link>
-              </div>
-            </div>}>
-          </Route>
-        </Routes>
+                <div className="sorry">Sorry - that page dose not exist, try there:</div>
+                <div>
+                  <Link to="/main">Go to main page</Link>
+                </div>
+                <div>
+                  <Link to="/task1">Go to task 1</Link>
+                </div>
+                <div>
+                  <Link to="/task2">Go to task 2</Link>
+                </div>
+                <div>
+                  <Link to="/apod">Go to APOD</Link>
+                </div>
+                <div>
+                  <Link to="/image">Go to image selector</Link>
+                </div>
+              </div>}>
+            </Route>
+          </Routes>
+        </div>
       </Router>
     </>
   )
