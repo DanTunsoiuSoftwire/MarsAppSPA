@@ -1,28 +1,14 @@
 ﻿import {useEffect, useState} from "react";
 import * as axios from "axios";
+import {APODData} from "./APODDate.ts";
 
-export default function APODComponent() {
-    const defaultDate = {
-        copyright: "",
-        date: "",
-        explanation: "",
-        hdurl: "",
-        media_type: "",
-        service_version: "",
-        title: "",
-        url: ""
-    }
+export default function APODComponent(props: { api : axios.AxiosInstance }) {
+    const defaultDate: APODData = new APODData();
     const [photoData, setPhotoData] = useState(defaultDate);
-    const api = axios.create({
-        baseURL: 'http://localhost:5100',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-    })
 
     const fetchPhoto = async () => {
         try {
-            const { data } = await api.get('apod/today')
+            const { data } = await props.api.get('apod/today')
             setPhotoData(data);
         } catch (error) {
             console.error(error);
@@ -42,7 +28,7 @@ export default function APODComponent() {
             <h1> {photoData.title} </h1>
             <img
                 src={photoData.url}
-                alt="Could not get image from the url."
+                alt="Waiting for image."
                 />
         </div>
     )
