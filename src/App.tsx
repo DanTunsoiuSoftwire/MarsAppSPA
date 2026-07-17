@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Route, Link, Routes} from 'react-router-dom';
 import MainPage from "./Components/Part4/MainPage.tsx";
 import Task1Page from "./Components/Part4/Task1Page.tsx";
 import Task2Page from "./Components/Part4/Task2Page.tsx";
+import APODComponent from "./Components/CosmoAPI/APODComponent.tsx";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route path="/main" element={<MainPage />} />
           <Route path="/task1" element={<Task1Page />} />
           <Route path="/task2" element={<Task2Page />} />
+          <Route path="/apod" element={<APODComponent />} />
           <Route path="" element={
             <div>
               <div className="sorry">Sorry - that page dose not exist, try there:</div>
@@ -24,6 +26,9 @@ function App() {
               </div>
               <div>
                 <Link to="/task2">Go to task 2</Link>
+              </div>
+              <div>
+                <Link to="/apod">Go to APOD</Link>
               </div>
             </div>}>
           </Route>
